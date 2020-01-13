@@ -36,7 +36,7 @@ public class NamesAKLSDÑFJKLÑFGDJWEQKLHRKH {
     void m() {
         int a = l;
 
-        if (0 == O) {
+        if (Integer.valueOf(0).equals(O)) {
             System.out.printf("they are equals LOL");
         }
 
