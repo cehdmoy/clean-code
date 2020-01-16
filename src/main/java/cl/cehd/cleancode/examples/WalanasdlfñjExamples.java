@@ -1,6 +1,6 @@
 package cl.cehd.cleancode.examples;
 
-public class MethosExamples {
+public class WalanasdlfñjExamples {
 
     //Do Only one thing and do it well
     boolean erros(String req, String response) {
@@ -45,15 +45,14 @@ public class MethosExamples {
         }
         return false;
     }
-    //How many lines
 
+    //TODO: How many lines should have a method, a class
 
     class User {
         String urs;
         String pass;
         String type;
     }
-
 
     private void logClientForMetricPurpose(String client) {
 

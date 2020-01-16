@@ -3,7 +3,7 @@ package cl.cehd.cleancode.examples;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NamesAKLSDÑFJKLÑFGDJWEQKLHRKH {
+public class AFSDSGH {
 
     //Date mm/dd/yy
     String d;
