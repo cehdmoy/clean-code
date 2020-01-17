@@ -2,6 +2,8 @@ package cl.cehd.cleancode.examples;
 
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 public class BAD_NAME_CLASS_AFDGSFHDN {
@@ -18,11 +20,15 @@ public class BAD_NAME_CLASS_AFDGSFHDN {
         //list.stream().filter(n -> n % 2 == 0).forEach(integer -> System.out.println(integer));
 
 
+        Set<NumberTwice> collect = list.stream()
+                .filter(n -> n % 2 == 0)
+                .map(p -> new NumberTwice(String.valueOf(p)))
+                .collect(Collectors.toSet());
 
-       // list.stream()
-         //       .filter(n -> n % 2 == 0)
-           //     .map(pares -> "******" + String.valueOf(pares))
-             //   .forEach(integer -> System.out.println(integer));
+        collect.stream().forEach(l-> System.out.println(l.print()));
+
+        //collect.forEach(e-> System.out.println(e.));
+
 
         /*list.stream().filter(numero -> {
             int contador = 2;
@@ -48,5 +54,19 @@ public class BAD_NAME_CLASS_AFDGSFHDN {
 
     }
 
+
+   static class NumberTwice {
+       String value;
+       String valueTwice;
+
+       public NumberTwice(String value) {
+           this.value = value;
+           this.valueTwice = String.valueOf(Integer.valueOf(value) * 2);
+       }
+
+       public String print() {
+           return "PRINT VALUE: " + this.value + " DOUBLE VALUE:" + this.valueTwice;
+       }
+   }
 
 }
